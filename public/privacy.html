@@ -25,7 +25,7 @@
     <section class="section">
       <h2>収集する情報</h2>
       <p>現行バージョンでは、開発者が実名、メールアドレス、位置情報など、ユーザーを直接識別する情報を収集しません。</p>
-      <p>広告配信のため、Google Mobile Ads SDKを使用します。Google Mobile Ads SDKは、広告の配信、計測、不正利用防止などのために、IPアドレス、端末ID、広告データ、広告への操作情報、クラッシュやパフォーマンスに関する情報などを処理する場合があります。</p>
+      <p>広告配信のため、Google Mobile Ads SDKを使用します。Google Mobile Ads SDKは、広告の配信、計測、不正利用防止などのために、IPアドレス、端末ID、おおよその位置情報、広告データ、広告への操作情報、クラッシュやパフォーマンスに関する情報などを処理する場合があります。</p>
     </section>
 
     <section class="section">
@@ -47,7 +47,7 @@
 
     <section class="section">
       <h2>位置情報</h2>
-      <p>現行バージョンでは、位置情報を取得しません。</p>
+      <p>現行バージョンでは、GPSなどの正確な位置情報を取得せず、位置情報の許可要求も行いません。ただし、広告配信のため、Google Mobile Ads SDKがIPアドレスなどから推定されるおおよその地域情報を処理する場合があります。</p>
     </section>
 
     <section class="section">
@@ -63,7 +63,7 @@
     <section class="section">
       <h2>広告とトラッキング</h2>
       <p>現行バージョンでは、Google Mobile Ads SDKを使って広告を表示します。広告枠はふりかえり画面の下部に限定し、ホーム、完了直後、通知には表示しません。</p>
-      <p>アプリはIDFAの許可要求を行いません。また、Google Mobile Ads SDKのPublisher first-party IDは無効化しています。広告配信のため、Googleおよび広告パートナーが端末情報や広告表示/操作情報を処理する場合があります。</p>
+      <p>アプリはIDFAの許可要求を行いません。また、Google Mobile Ads SDKのPublisher first-party IDは無効化し、広告リクエストでは非パーソナライズ広告を指定します。ただし、非パーソナライズ広告でも、頻度制御や集計レポートなどのために端末ID等が使われる場合があります。広告配信のため、Googleおよび広告パートナーが端末情報や広告表示/操作情報を処理する場合があります。</p>
     </section>
 
     <section class="section">
