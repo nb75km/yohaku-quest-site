@@ -1,0 +1,140 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f6f1;
+  --ink: #20231f;
+  --muted: #777a70;
+  --line: #ddd9cf;
+  --soft: #eeece4;
+  --accent: #2d322c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+.page {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 0 80px;
+}
+
+.hero {
+  min-height: 48vh;
+  display: grid;
+  align-content: center;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 44px;
+}
+
+.hero.compact {
+  min-height: 32vh;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: clamp(42px, 9vw, 72px);
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.lead {
+  max-width: 34em;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.actions a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  padding: 9px 16px;
+  text-decoration: none;
+}
+
+.actions a:focus,
+.actions a:hover {
+  background: var(--soft);
+}
+
+.section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section p:last-child,
+.qa p:last-child,
+.section ul:last-child {
+  margin-bottom: 0;
+}
+
+.qa {
+  padding: 18px 0;
+}
+
+.qa + .qa {
+  border-top: 1px solid var(--line);
+}
+
+ul {
+  padding-left: 1.3em;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 520px) {
+  .page {
+    width: min(100% - 28px, 720px);
+    padding-top: 32px;
+  }
+
+  .hero {
+    min-height: 42vh;
+  }
+
+  h1 {
+    font-size: clamp(38px, 14vw, 58px);
+  }
+}
